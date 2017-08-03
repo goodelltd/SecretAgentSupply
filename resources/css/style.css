@@ -1,7 +1,6 @@
 html, body {
   font-size: 18px;
   font-family: Helvetica;
-
 }
 
 header {
@@ -35,9 +34,12 @@ header .container {
 
 .banner {
   height: 25rem;
-  display: flex;
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
   background-size: cover;
+}
+
+.banner .container {
+  display: flex;
 }
 
 .advert {
@@ -46,6 +48,7 @@ header .container {
   margin-top: 9rem;
   color: white;
   padding: 2rem 3rem;
+  display: block;
 }
 
 .advert p {
@@ -139,5 +142,106 @@ footer {
 footer span {
   align-items: center;
 }
+
+.smallscreen {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px){
+  .bannermenu .container span {
+    display: none;
+  }
+
+  .container h3 {
+    padding: 2rem 0;
+  }
+
+  .smallscreen {
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 1.75rem 0;
+  }
+
+  .item {
+    text-align: center;
+    width: 47%;
+  }
+
+  .inventory .container{
+    display: flex;
+    padding: 3rem 0;
+    justify-content: space-around;
+  }
+
+  #glasses {
+    display: none;
+  }
+
+  .information .container {
+    justify-content: space-between;
+  }
+
+  .info {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 470px){
+
+  .banner {
+    height: 15rem;
+  }
+
+  .advert {
+    background-color: black;
+    width: 100%;
+    color: white;
+    padding: 1rem 2rem;
+    align-items: flex-end;
+    margin-top: 10rem;
+  }
+
+  .advert p {
+    font-size: 0.77rem;
+    font-weight: bold;
+  }
+
+  .advert h2 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .item {
+    text-align: center;
+    width: 90%;
+  }
+
+  #watch {
+    display: none;
+  }
+
+  .information .container {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    margin-bottom: 0.5rem;
+    width: 90%;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
 
 /*This is for space!*/
